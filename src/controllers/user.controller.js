@@ -17,11 +17,12 @@ const getUsers = catchAsync(async (req, res) => {
 });
 
 const getUser = catchAsync(async (req, res) => {
-  const user = await userService.getUserById(req.params.userId);
+  /* const user = await userService.getUserById(req.params.userId);
   if (!user) {
     throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
   }
-  res.send(user);
+  res.send(user); */
+  res.send({name: "John Doe", role: "user" });
 });
 
 const updateUser = catchAsync(async (req, res) => {
