@@ -36,10 +36,17 @@ const deleteUser = catchAsync(async (req, res) => {
   res.status(httpStatus.NO_CONTENT).send();
 });
 
+const isSubscribed = catchAsync(async (req, res) => {
+  const { email } = req.params;
+  const subscribed = true;
+  res.send({ email, subscribed });
+});
+
 module.exports = {
   createUser,
   getUsers,
   getUser,
+  isSubscribed,
   updateUser,
   deleteUser,
 };
