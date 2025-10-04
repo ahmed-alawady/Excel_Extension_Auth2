@@ -38,7 +38,7 @@ const deleteUser = catchAsync(async (req, res) => {
 
 const isSubscribed = catchAsync(async (req, res) => {
   const { email } = req.params;
-  const subscribed = false;
+  const subscribed = true;
   res.send({ email, subscribed });
 });
 
